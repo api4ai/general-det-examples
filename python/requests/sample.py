@@ -56,8 +56,8 @@ if __name__ == '__main__':
     print(f'💬 Raw response:\n{response.text}\n')
 
     # Parse response and objects with confidence > 0.5.
-    confinend = [x['entities'][0]['classes']
+    confident = [x['entities'][0]['classes']
                  for x in response.json()['results'][0]['entities'][0]['objects']  # noqa
                  if list(x['entities'][0]['classes'].values())[0] > 0.5]
 
-    print(f'💬 Objects with confidence above 0.5:\n{confinend}\n')
+    print(f'💬 Objects with confidence above 0.5:\n{confident}\n')
