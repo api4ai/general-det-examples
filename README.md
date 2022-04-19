@@ -27,9 +27,9 @@ The algorithm’s output is simple and self-sufficient: a detected object in a b
 This solution suits well as a basis for almost any computer vision application that aims for either all-in-one product or simple object detection goals.
 
 <div align="center">
-<img width="400" src="https://storage.googleapis.com/api4ai-static/rapidapi/general-detection_1.png"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img width="400" src="https://storage.googleapis.com/api4ai-static/rapidapi/general_detection_2.png"/>
+<img width="350" src="https://storage.googleapis.com/api4ai-static/visuals/general-detection_1.jpg"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img width="350" src="https://storage.googleapis.com/api4ai-static/visuals/general_detection_2.jpg"/>
 </div>
 
 
