@@ -34,7 +34,7 @@ OPTIONS = {
 
 async def main():
     """Entry point."""
-    image = sys.argv[1] if len(sys.argv) > 1 else 'https://storage.googleapis.com/api4ai-static/samples/general-det-1.jpg'  # noqa
+    image = sys.argv[1] if len(sys.argv) > 1 else 'https://storage.googleapis.com/api4ai-static/samples/general-det-1.jpg'
 
     # response = None
     async with aiohttp.ClientSession() as session:
@@ -46,7 +46,7 @@ async def main():
             data = {'image': open(image, 'rb')}
         # Make request.
         async with session.post(OPTIONS[MODE]['url'],
-                                data=data,  # noqa
+                                data=data,
                                 headers=OPTIONS[MODE]['headers']) as response:
             resp_json = await response.json()
             resp_text = await response.text()
@@ -56,7 +56,7 @@ async def main():
 
         # Parse response and objects with confidence > 0.5.
         confinend = [x['entities'][0]['classes']
-                     for x in resp_json['results'][0]['entities'][0]['objects']  # noqa
+                     for x in resp_json['results'][0]['entities'][0]['objects']
                      if list(x['entities'][0]['classes'].values())[0] > 0.5]
 
         print(f'💬 Objects with confidence above 0.5:\n{confinend}\n')
