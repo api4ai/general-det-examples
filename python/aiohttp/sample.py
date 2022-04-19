@@ -55,11 +55,11 @@ async def main():
         print(f'💬 Raw response:\n{resp_text}\n')
 
         # Parse response and objects with confidence > 0.5.
-        confinend = [x['entities'][0]['classes']
+        confident = [x['entities'][0]['classes']
                      for x in resp_json['results'][0]['entities'][0]['objects']
                      if list(x['entities'][0]['classes'].values())[0] > 0.5]
 
-        print(f'💬 Objects with confidence above 0.5:\n{confinend}\n')
+        print(f'💬 Objects with confidence above 0.5:\n{confident}\n')
 
 
 if __name__ == '__main__':
