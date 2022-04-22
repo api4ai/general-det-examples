@@ -62,4 +62,4 @@ if __name__ == '__main__':
                  for x in response.json()['results'][0]['entities'][0]['objects']  # noqa
                  if list(x['entities'][0]['classes'].values())[0] > 0.5]
 
-    print(f'💬 Objects with confidence above 0.5:\n{confident}\n')
+    print(f'💬 {len(confident)} objects found with confidence above 0.5:\n{confident}\n')
