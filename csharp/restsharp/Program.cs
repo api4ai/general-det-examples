@@ -51,6 +51,8 @@ if (image.Contains("://")) {
 } else {
     request.AddFile("image", image, MimeTypeMap.GetMimeType(Path.GetExtension(image)));
 }
+
+// Perform request.
 var jsonResponse = (await client.ExecutePostAsync(request)).Content!;
 
 // Print raw response.
